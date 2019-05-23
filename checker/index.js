@@ -1,8 +1,10 @@
-const express = require('express')
-const PORT = 8000
-const app = express()
+const express = require("express");
+const bodyParser = require("body-parser");
+const PORT = 8000;
 
+const app = express();
+app.use(bodyParser.json());
 
-app.get('/', (_, res) => res.send('Hello from raeden-checker'))
+app.get("/", (_, res) => res.send("Hello from raedan-checker"));
 
-app.listen(PORT, () => console.log(`raedan-checker listening on port ${PORT}`))
+app.listen(PORT, () => console.log(`raedan-checker listening on port ${PORT}`));
